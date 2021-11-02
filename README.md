@@ -30,7 +30,7 @@ Please follow these steps to install the shurjoPay Payment Gateway module.
 ![SHURJOPAY in Prestashop Admin Panel](images/adminpanel.png)
 
 * Follow Step 6
-![SHURJOPAY Configure Page](images/configure.png)
+![SHURJOPAY Configure Page](images/config.png)
 
 * Show In Checkout Page(Step 9)
 ![Checkout Page](images/checkout.png)
