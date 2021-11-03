@@ -160,7 +160,7 @@ class ShurjopayRequestModuleFrontController extends ModuleFrontController
 		$curl = curl_init();
 
 		curl_setopt_array($curl, array(
-			CURLOPT_URL => $data['engine_url'].'api/get_token',
+			CURLOPT_URL => $data['engine_url'].'/api/get_token',
 			CURLOPT_RETURNTRANSFER => true,
 			CURLOPT_ENCODING => '',
 			CURLOPT_MAXREDIRS => 10,
@@ -196,7 +196,7 @@ class ShurjopayRequestModuleFrontController extends ModuleFrontController
             $curl = curl_init();
 
             curl_setopt_array($curl, array(
-                CURLOPT_URL =>$data['engine_url'].'api/secret-pay',
+                CURLOPT_URL =>$data['engine_url'].'/api/secret-pay',
                 CURLOPT_RETURNTRANSFER => true,
                 CURLOPT_ENCODING => '',
                 CURLOPT_MAXREDIRS => 10,
