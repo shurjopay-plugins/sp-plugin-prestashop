@@ -68,7 +68,7 @@ class ShurjopayValidationModuleFrontController extends ModuleFrontController
 		$customer = new Customer($cart->id_customer);
 		$currency = $this->context->currency;
 		$total = (float)$cart->getOrderTotal(true, Cart::BOTH);
-		$order_id = Order::getOrderByCartId((int)($tran_id));
+		//$order_id = Order::getOrderByCartId((int)($tran_id));
 		$val_id = $_POST['val_id'];
 		
 // 		echo $tran_id."----".$order_id."----".$val_id;exit;
@@ -149,8 +149,7 @@ class ShurjopayValidationModuleFrontController extends ModuleFrontController
                 CURLOPT_FOLLOWLOCATION => true,
                 CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
                 CURLOPT_CUSTOMREQUEST => 'POST',
-                CURLOPT_POSTFIELDS =>$tran_id
-            ,
+                CURLOPT_POSTFIELDS =>$tran_id,
                 CURLOPT_HTTPHEADER => array(
                     'Authorization:Bearer '.$tok,
                     'Content-Type: application/json'
