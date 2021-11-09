@@ -98,7 +98,7 @@ class ShurjopayRequestModuleFrontController extends ModuleFrontController
 		else{
 			echo "Customer Country not found !";
 		}
-		if(($customer->phone))
+		if(($address->phone))
 		{
 			$data['cus_phone'] = $address->phone;
 		}
