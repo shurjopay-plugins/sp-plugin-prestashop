@@ -54,15 +54,56 @@ class ShurjopayRequestModuleFrontController extends ModuleFrontController
 
 		$data['tran_id'] = $cart->id;
 		$data['total_amount'] = number_format( sprintf( "%01.2f", $total ), 2, '.', '' );
-		$data['cus_name'] = $customer->firstname.' '.$customer->lastname;
-		$data['cus_add1'] = $address->address1;
-		$data['cus_add2'] = $address->address2;
-		$data['cus_city'] = $address->city;
-		$data['cus_state'] = $customer->city;
-		$data['cus_postcode'] = $address->postcode;  
-		$data['cus_country'] = $address->country;
-		$data['cus_phone'] = $address->phone;
-		$data['cus_email'] = $customer->email;
+				if(($address->address1))
+		{
+			$data['cus_add1'] = $address->address1;
+			$data['cus_add2'] = $address->address2;
+		}
+		else{
+			echo "Customer Address not found !";
+		}
+		if(($address->city))
+		{
+			$data['cus_city'] = $address->city;
+		}
+		else{
+			echo "Customer City not found !";
+		}
+		if(($address->city))
+		{
+			$data['cus_state'] = $address->city;
+		}
+		else{
+			echo "Customer State not found !";
+		}
+		if(($address->postcode))
+		{
+			$data['cus_postcode'] = $address->postcode;
+		}
+		else{
+			echo "Customer Postcode not found !";
+		}
+		if(($address->country))
+		{
+			$data['cus_country'] = $address->country;
+		}
+		else{
+			echo "Customer Country not found !";
+		}
+		if(($customer->phone))
+		{
+			$data['cus_phone'] = $address->phone;
+		}
+		else{
+			echo "Customer Phone not found !";
+		}
+		if(($customer->email))
+		{
+			$data['cus_email'] = $customer->email;
+		}
+		else{
+			echo "Customer Email not found !";
+		}
 
 		if ($address_ship) {
 			$data['ship_name'] = $address_ship->firstname.' '.$address_ship->lastname;
