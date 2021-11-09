@@ -344,7 +344,7 @@ class SHURJOPAY extends PaymentModule
             'id_language' => $this->context->language->id
         );
 
-        return $helper->generateForm(array($fields_form));
+        return $helper->generateForm(array($fields_form ));
     }
 
     public function getConfigFieldsValues()

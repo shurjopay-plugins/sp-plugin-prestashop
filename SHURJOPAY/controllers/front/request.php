@@ -54,7 +54,15 @@ class ShurjopayRequestModuleFrontController extends ModuleFrontController
 
 		$data['tran_id'] = $cart->id;
 		$data['total_amount'] = number_format( sprintf( "%01.2f", $total ), 2, '.', '' );
-				if(($address->address1))
+		if(($customer->firstname) || ($customer->lastname))
+		{
+			$data['cus_name'] = $customer->firstname.' '.$customer->lastname;
+		}
+		else{
+			echo "Customer Name not found !";
+		}
+
+		if(($address->address1))
 		{
 			$data['cus_add1'] = $address->address1;
 			$data['cus_add2'] = $address->address2;
