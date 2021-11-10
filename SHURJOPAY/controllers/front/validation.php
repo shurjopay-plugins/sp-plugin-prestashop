@@ -69,7 +69,7 @@ class ShurjopayValidationModuleFrontController extends ModuleFrontController
 		$currency = $this->context->currency;
 		$total = (float)$cart->getOrderTotal(true, Cart::BOTH);
 		//$order_id = Order::getOrderByCartId((int)($tran_id));
-		$val_id = $_POST['val_id'];
+		/*$val_id = $_POST['val_id'];*/
 		
 // 		echo $tran_id."----".$order_id."----".$val_id;exit;
 
