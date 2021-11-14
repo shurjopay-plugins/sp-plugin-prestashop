@@ -258,25 +258,6 @@ class SHURJOPAY extends PaymentModule
                             )
                         ),
                     ),
-                   /* array(
-                        'type' => 'switch',
-                        'label' => 'Live Mode',
-                        'name' => 'MODE',
-                        'is_bool' => true,
-                        'hint' => 'Your country\'s legislation may require you to send the invitation to pay by email only. Disabling the option will hide the invitation on the confirmation page.',
-                        'values' => array(
-                            array(
-                                'id' => 'active_on',
-                                'value' => true,
-                                'label' => 'Test',
-                            ),
-                            array(
-                                'id' => 'active_off',
-                                'value' => false,
-                                'label' => 'Live',
-                            )
-                        ),
-                    ),*/
                     array(
                         'type' => 'text',
                         'label' => 'Title',
@@ -313,11 +294,6 @@ class SHURJOPAY extends PaymentModule
                         'name' => 'ENGINE_URL',
                         'required' => true
                     ),
-/*                    array(
-                        'label' => 'IPN URL',
-                        'hint' => 'Use this IPN URL to your merchant panel',
-                        'desc' => $this->context->link->getModuleLink('SHURJOPAY', 'ipn', array(), true)
-                    ),*/
                 ),
                 'submit' => array(
                     'title' => 'Save',
@@ -366,7 +342,6 @@ class SHURJOPAY extends PaymentModule
     public function getTemplateVars()
     {
         global $cookie, $cart; 
-        $api_type = "";
 
         $cart = new Cart(intval($cookie->id_cart));
         $tran_id = $cart->id;
